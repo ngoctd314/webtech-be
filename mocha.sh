@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Declare variable
 type="full"
 path=""
