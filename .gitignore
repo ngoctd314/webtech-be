@@ -1,0 +1,8 @@
+node_modules
+docs
+dist
+coverage
+.env
+yarn.lock
+yarn-error.log
+src/config/production.ts
