@@ -10,7 +10,7 @@
     "start:dev": "nodemon",
     "start:prod": "NODE_ENV=production node -r dotenv/config -r  ts-node/register/transpile-only -r tsconfig-paths/register ./dist/src/index.js dotenv_config_path=./.env",
     "build": "tsc -p tsconfig.json",
-    "start": "NODE_ENV=production node -r ts-node/register/transpile-only -r tsconfig-paths/register ./dist/src/index.js"
+    "start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register ./dist/src/index.js"
   },
   "license": "MIT",
   "devDependencies": {
