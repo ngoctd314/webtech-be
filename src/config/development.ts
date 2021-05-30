@@ -12,7 +12,7 @@ const config: Config = {
     domain: 'http://localhost:3000',
   },
   database: {
-    uri: 'mongodb://localhost:27017/dev-web-tech',
+    uri: `${process.env.MONGO_URI}`,
   },
   cookies: {
     jwt: {
@@ -24,8 +24,8 @@ const config: Config = {
     host: 'smtp.mailtrap.io',
     service: 'gmail',
     port: 25,
-    username: 'tdn.social.network@gmail.com',
-    password: 'socialnetwork',
+    username: `${process.env.GMAIL_USER}`,
+    password: `${process.env.GMAIL_PASSWORD}`,
   },
 };
 export default config;
