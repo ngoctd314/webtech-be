@@ -18,7 +18,7 @@ const PORT: number = config.server.port;
 /**
  * Server Activation
  */
-app.listen(PORT || 6789, () => {
+app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);
   console.log(config.server.host);
 });
