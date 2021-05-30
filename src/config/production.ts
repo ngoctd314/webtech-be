@@ -3,7 +3,7 @@ import { Config } from '@custom-types/config';
 const config: Config = {
   server: {
     host: 'https://learn-web-programing.herokuapp.com',
-    port: 7000,
+    port: parseInt(`${process.env.PORT}`, 10),
     api: {
       version: 'api/v1',
     },
