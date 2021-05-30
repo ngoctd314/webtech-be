@@ -50,6 +50,7 @@ export const setJwtRes = (res: Response, token: string): Response => {
     maxAge: 30 * 86400 * 1000,
     httpOnly: true,
     sameSite: 'none',
+    secure: true,
   });
 };
 
