@@ -49,7 +49,6 @@ export const setJwtRes = (res: Response, token: string): Response => {
   return res.cookie('jwt', token, {
     maxAge: 30 * 86400 * 1000,
     httpOnly: true,
-    domain: 'https://web-tech-2021.web.app',
     sameSite: 'none',
   });
 };
