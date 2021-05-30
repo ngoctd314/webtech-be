@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const _middleware_1 = require("@middleware");
+const express_1 = require("express");
+const controllers_1 = require("./controllers");
+const router = express_1.Router();
+router.post('/', _middleware_1.authenticated, _middleware_1.authorization('admin'), controllers_1.crudChallenge._create);
+router.get('/all', controllers_1.crudChallenge._readAll);
+router.get('/:course', controllers_1.crudChallenge._readCourse);
+router.get('/:course/:id', controllers_1.crudChallenge._readID);
+router.delete('/:id', _middleware_1.authenticated, _middleware_1.authorization('admin'), controllers_1.crudChallenge._delete);
+exports.default = router;
