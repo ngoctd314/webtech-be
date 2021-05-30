@@ -9,7 +9,7 @@
     "dist",
     "__test__"
   ],
-  "exec": "NODE_ENV=development ts-node -r tsconfig-paths/register ./src/index.ts",
+  "exec": "NODE_ENV=development ts-node -r dotenv/config -r tsconfig-paths/register ./src/index.ts dotenv_config_path=./.env",
   "restartable": "rs",
   "env": {
     "NODE_ENV": "development"
