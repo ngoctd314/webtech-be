@@ -28,8 +28,8 @@ const setJwtRes = (res, token) => {
     return res.cookie('jwt', token, {
         maxAge: 30 * 86400 * 1000,
         httpOnly: true,
-        domain: 'https://web-tech-2021.web.app',
         sameSite: 'none',
+        secure: true,
     });
 };
 exports.setJwtRes = setJwtRes;
