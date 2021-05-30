@@ -5,8 +5,9 @@
   "author": "tranducngocmygit134 <tranducngoc134@gmail.com>",
   "scripts": {
     "start:dev": "nodemon",
-    "start:prod": "NODE_ENV=production node -r ts-node/register/transpile-only -r tsconfig-paths/register ./dist/src/index.js",
-    "build": "tsc -p tsconfig.json"
+    "start:prod": "NODE_ENV=production node -r dotenv/config -r  ts-node/register/transpile-only -r tsconfig-paths/register ./dist/src/index.js dotenv_config_path=./dist/.env",
+    "build": "tsc -p tsconfig.json",
+    "start": "NODE_ENV=production node -r ts-node/register/transpile-only -r tsconfig-paths/register ./dist/src/index.js"
   },
   "license": "MIT",
   "devDependencies": {
@@ -44,7 +45,7 @@
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
-    "dotenv": "^9.0.2",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-validator": "^6.11.1",
     "helmet": "^4.6.0",
