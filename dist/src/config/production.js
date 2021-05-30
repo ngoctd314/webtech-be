@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const config = {
     server: {
         host: 'https://learn-web-programing.herokuapp.com',
-        port: 7000,
+        port: parseInt(`${process.env.PORT}`, 10),
         api: {
             version: 'api/v1',
         },
