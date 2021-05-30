@@ -54,7 +54,7 @@ const _read = [
     try {
       const { post } = req.query;
       const comments = await CommentModel.find({ post: `${post}` })
-        .populate('user', 'email avatar')
+        .populate('user', 'email avatar firstName lastName')
         .exec();
       res.status(200).json({
         comments,
