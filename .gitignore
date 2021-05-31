@@ -4,4 +4,3 @@ coverage
 .env
 yarn.lock
 yarn-error.log
-src
