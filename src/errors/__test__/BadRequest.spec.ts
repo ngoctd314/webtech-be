@@ -9,7 +9,7 @@ describe('Bad Request Test Suite', () => {
     const errors = [{ msg: 'Invalid email', param: 'email' }];
     const badRequest = new BadRequest(errors);
 
-    expect(badRequest.statusCode).to.equal(400);
+    expect(badRequest.statusCode).to.equal(401);
     expect(badRequest.serializeErrors()).to.be.a('array');
   });
 });
