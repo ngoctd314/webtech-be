@@ -5,7 +5,7 @@ dist: trusty
 services:
   - mongodb
 env:
-  - NODE_ENV=ci PORT=7000
+  - NODE_ENV=ci PORT=7000 GMAIL_USER=tdn.social.network@gmail.com GMAIL_PASSWORD=socialnetwork
 cache:
   directories:
     - node_modules
