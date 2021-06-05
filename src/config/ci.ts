@@ -12,7 +12,7 @@ const config: Config = {
     domain: 'http://localhost:3000',
   },
   database: {
-    uri: 'mongodb://localhost:27017/ci-social-media',
+    uri: 'mongodb://127.0.0.1:27017/ci-webtech',
   },
   cookies: {
     jwt: {

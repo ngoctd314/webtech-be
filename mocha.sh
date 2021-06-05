@@ -37,11 +37,11 @@ fi
 
 if [[ $type == "full" ]]
 then
-  NODE_ENV=test mocha --timeout 10000 -r ts-node/register -r tsconfig-paths/register --file src/__test__/setup.spec.ts src/**/__test__/**/*.spec.ts
+  NODE_ENV=test mocha --timeout 10000 -r ts-node/register -r tsconfig-paths/register -r dotenv/config --file src/__test__/setup.spec.ts src/**/__test__/**/*.spec.ts dotenv_config_path=./.env 
 elif [[ $type == 'folder' ]]
 then
-  NODE_ENV=test mocha --timeout 10000 -r ts-node/register -r tsconfig-paths/register --file src/__test__/setup.spec.ts src/$path/__test__/**/*.spec.ts
+  NODE_ENV=test mocha --timeout 10000 -r ts-node/register -r tsconfig-paths/register -r dotenv/config dotenv_config_path=./.env --file src/__test__/setup.spec.ts src/$path/__test__/**/*.spec.ts
 elif [[ $type == 'file' ]]
 then
-  NODE_ENV=test mocha --timeout 10000 -r ts-node/register -r tsconfig-paths/register --file src/__test__/setup.spec.ts src/$path/__test__/**/$file.spec.ts
+  NODE_ENV=test mocha --timeout 10000 -r ts-node/register -r tsconfig-paths/register -r dotenv/config dotenv_config_path=./.env --file src/__test__/setup.spec.ts src/$path/__test__/**/$file.spec.ts
 fi

@@ -9,6 +9,7 @@ const helmet_1 = __importDefault(require("helmet"));
 const swagger_ui_express_1 = __importDefault(require("swagger-ui-express"));
 const swagger_jsdoc_1 = __importDefault(require("swagger-jsdoc"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
+const compression_1 = __importDefault(require("compression"));
 const _common_1 = require("@common");
 const routes_1 = __importDefault(require("@auth/routes"));
 const routes_2 = __importDefault(require("@user/routes"));
@@ -19,6 +20,7 @@ const routes_6 = __importDefault(require("@comment/routes"));
 const _config_1 = __importDefault(require("@config"));
 const app = express_1.default();
 const { server, client } = _config_1.default;
+app.use(compression_1.default());
 app.use(helmet_1.default());
 app.use(cors_1.default({
     origin: client.domain,

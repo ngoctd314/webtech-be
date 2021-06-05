@@ -7,6 +7,7 @@ import helmet from 'helmet';
 import swaggerUi from 'swagger-ui-express';
 import swaggerJsdoc from 'swagger-jsdoc';
 import cookieParser from 'cookie-parser';
+import compression from 'compression';
 
 /**
  * Required Dev Modules
@@ -29,6 +30,8 @@ const { server, client } = config;
 /**
  * App Configuration
  */
+// gzip
+app.use(compression());
 
 // Setting various HTTP headers
 app.use(helmet());

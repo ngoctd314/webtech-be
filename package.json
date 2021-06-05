@@ -9,11 +9,13 @@
   "scripts": {
     "start:dev": "nodemon",
     "start:prod": "NODE_ENV=production node -r dotenv/config -r  ts-node/register/transpile-only -r tsconfig-paths/register ./dist/src/index.js dotenv_config_path=./.env",
+    "build": "tsc -p tsconfig.prod.json",
     "start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register ./dist/src/index.js"
   },
   "license": "MIT",
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
+    "@types/compression": "^1.7.0",
     "@types/cookie-parser": "^1.4.2",
     "@types/cors": "^2.8.10",
     "@types/dotenv": "^8.2.0",
@@ -44,6 +46,7 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",

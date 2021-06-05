@@ -3,6 +3,7 @@
  */
 import development from './development';
 import production from './production';
+import ci from './ci';
 
 const { NODE_ENV } = process.env;
 
@@ -16,6 +17,8 @@ function config() {
     }
     case 'production':
       return production;
+    case 'ci':
+      return ci;
     default:
       return development;
   }
