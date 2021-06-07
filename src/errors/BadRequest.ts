@@ -2,7 +2,7 @@ import HttpException from './HttpException';
 import { Errors } from '@custom-types/errors';
 
 export default class BadRequest extends HttpException {
-  public statusCode = 401;
+  public statusCode = 400;
 
   constructor(private errors: Errors) {
     super();
