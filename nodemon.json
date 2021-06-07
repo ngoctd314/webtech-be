@@ -1,0 +1,17 @@
+{
+  "watch": [
+    "src"
+  ],
+  "ext": "ts,js,json",
+  "ignore": [
+    "node_modules",
+    "coverage",
+    "dist",
+    "__test__"
+  ],
+  "exec": "NODE_ENV=development ts-node -r dotenv/config -r tsconfig-paths/register ./src/index.ts dotenv_config_path=./.env",
+  "restartable": "rs",
+  "env": {
+    "NODE_ENV": "development"
+  }
+}
